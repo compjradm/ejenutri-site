@@ -214,7 +214,7 @@ article h1:first-child {
 }
 
 .article-logo h3 {
-    color: #007948;
+
     font-family: tt0142m;
 }
 
@@ -360,4 +360,10 @@ footer h2 {
 .imagem-footer-5 {
     height: 2.5em;
     width: 6em;
+}
+
+campo{
+  width:200px;
+  border-radius: 2px;
+  height: 30px;
 }
