@@ -28,6 +28,15 @@ body {
     src: url(../font/tt0144m.ttf);
 }
 
+.cor-corpo {
+  color: #5f5f5f;
+}
+
+.botao-rodape {
+  background-color: #50b188;
+  color: #FFF;
+}
+
 /* Barra de Navegação */
 nav {
     position: fixed;
