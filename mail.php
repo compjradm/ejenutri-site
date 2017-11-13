@@ -16,7 +16,7 @@ $headers =  "Content-Type:text/html; charset=UTF-8\n";
   $headers .= "Return-Path:  \n";
   $headers .= "MIME-Version: 1.0\n";
 
-mail('thaalessa@gmail.com', $assunto, $corpo, $headers);  //função que faz o envio do email.
+mail('ejenutri.unesp@gmail.com', $assunto, $corpo, $headers);  //função que faz o envio do email.
 
 
 ?>
