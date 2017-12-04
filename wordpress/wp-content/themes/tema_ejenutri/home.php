@@ -114,7 +114,7 @@
 			<article style="background-color:#817f82;     padding-bottom: 2.5%;">
 				<div class="article-center">
 					<h2>Nossa História</h2>
-					<p class="cor-corpo">Fundada em 2006, A Empresa Júnior dos Estudantes de Nutrição da Unesp de Botucatu – EJENUTRI – não possui fins lucrativos e é composta exclusivamente por alunos do curso de graduação de nutrição, os quais são orientados por docentes do próprio curso. Para realizar todas suas atividades, a EJENUTRI conta com 7 diretorias as quais são devidamente treinadas e capacitadas para atender seus clientes da melhor forma possível. E com atuações individuais para um objetivo em comum proporcionam a seus integrantes um conhecimento que vai além do ramo da nutrição, trazendo assim, a tona habilidades necessárias para o desenvolvimento de empresas em seus mais diversos campos de atuação.</p>
+					<p class="cor-corpo"><?php echo do_shortcode('[retorno_txt id=7]');?></p>
 				</div>
 				<table style="width:45%; float:right;">
 					<tr>
@@ -253,11 +253,13 @@
 				<h2 id="projetos">Projetos</h2></div>
 				<center><table style="width:60%; text-align:center;">
 					<tr>
-						<td><button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal" style="background: transparent; border: none;"><img src="<?php echo $base_path;?>img/coffee.png"></button><h3>COFFEE BREAK <br>SAUDÁVEL</h3></td>
+						<?php var_dump(do_shortcode('[retorno_cat cat="projetos"]')); ?>
+						<!-- echo "" -->
+						<!--<td><button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal" style="background: transparent; border: none;"><img src="<?php echo $base_path;?>img/coffee.png"></button><h3>COFFEE BREAK <br>SAUDÁVEL</h3></td>
 						<td><button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal3" style="background: transparent; border: none;"><img src="<?php echo $base_path;?>img/nutrieduca.png"></button><h3>NUTRIEDUCA</h3></a></td>
 						<td><button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal2" style="background: transparent; border: none;"><img src="<?php echo $base_path;?>img/rotulagem.png"></button><h3>ROTULAGEM</h3></a></td>
 						<td><button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal4" style="background: transparent; border: none;"><img src="<?php echo $base_path;?>img/qnutri.png"></button><h3>Q NUTRI</h3></a></td>
-					</tr>
+					--></tr>
 				</table></center>
 				<div class="article-left" >
 

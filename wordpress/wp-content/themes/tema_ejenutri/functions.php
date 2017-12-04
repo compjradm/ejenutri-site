@@ -419,3 +419,33 @@ function twentysixteen_widget_tag_cloud_args( $args ) {
 	return $args;
 }
 add_filter( 'widget_tag_cloud_args', 'twentysixteen_widget_tag_cloud_args' );
+
+function return_byid($atts){
+	$var=shortcode_atts(array('id' => 0), $atts);
+	$x = get_post($var['id']);
+	//$x=$x->get("post_content");
+	//var_dump($x->get_instance($var['id'])->post_content);
+	return $x->post_content;
+}
+add_shortcode('retorno_txt', 'return_byid');
+
+function return_bycat($atts){
+	$var=shortcode_atts(array('cat' => ''), $atts);
+	//$id_cat=get_cat_ID($var['cat']);
+	
+	$categoria = array(
+    'post_type' => 'post',        
+    'tax_query' => array(
+    array(
+        'taxonomy' => 'category',
+        'field' => 'name',
+        'terms' => $var['cat']
+    )
+));
+	
+	//$categoria = array( 'category' => 3 );
+	$x = get_posts($categoria);
+	var_dump($x);
+	return $x["post_content"];
+}
+add_shortcode('retorno_cat', 'return_bycat');
