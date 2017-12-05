@@ -429,23 +429,40 @@ function return_byid($atts){
 }
 add_shortcode('retorno_txt', 'return_byid');
 
+add_theme_support( 'post-thumbnails' );
 function return_bycat($atts){
 	$var=shortcode_atts(array('cat' => ''), $atts);
 	//$id_cat=get_cat_ID($var['cat']);
 	
 	$categoria = array(
-    'post_type' => 'post',        
+    'post_type' => 'post',
+	'orderby' => 'title',
     'tax_query' => array(
     array(
         'taxonomy' => 'category',
         'field' => 'name',
         'terms' => $var['cat']
     )
-));
-	
-	//$categoria = array( 'category' => 3 );
+	));
 	$x = get_posts($categoria);
-	var_dump($x);
-	return $x["post_content"];
+	$cont=0;
+	//--------------- percorrendo array -----------------
+	foreach($x as $aux){
+		$cont++;
+		if ( has_post_thumbnail()){
+			$link = get_the_post_thumbnail();
+			echo $link;
+			$return .= '<td><button type="button" class="btn btn-info btn-lg" data-toggle="modal" 
+								data-target="#myModal'.$cont.'" style="background: transparent; border: none;">'
+								.$aux->post_title.'</td>';
+		}
+		else{
+			//echo 'aqui';
+			$return .= '<td><button type="button" class="btn btn-info btn-lg" data-toggle="modal" 
+								data-target="#myModal'.$cont.'" style="background: transparent; border: none;">'
+								.$aux->post_title.'</td>';
+		}
+	}
+	return $return;
 }
 add_shortcode('retorno_cat', 'return_bycat');

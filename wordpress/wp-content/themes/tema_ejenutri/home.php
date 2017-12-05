@@ -253,19 +253,32 @@
 				<h2 id="projetos">Projetos</h2></div>
 				<center><table style="width:60%; text-align:center;">
 					<tr>
-						<?php var_dump(do_shortcode('[retorno_cat cat="projetos"]')); ?>
+						<?php echo do_shortcode('[retorno_cat cat="projetos"]'); ?>
 						<!-- echo "" -->
-						<!--<td><button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal" style="background: transparent; border: none;"><img src="<?php echo $base_path;?>img/coffee.png"></button><h3>COFFEE BREAK <br>SAUDÁVEL</h3></td>
-						<td><button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal3" style="background: transparent; border: none;"><img src="<?php echo $base_path;?>img/nutrieduca.png"></button><h3>NUTRIEDUCA</h3></a></td>
-						<td><button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal2" style="background: transparent; border: none;"><img src="<?php echo $base_path;?>img/rotulagem.png"></button><h3>ROTULAGEM</h3></a></td>
-						<td><button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal4" style="background: transparent; border: none;"><img src="<?php echo $base_path;?>img/qnutri.png"></button><h3>Q NUTRI</h3></a></td>
+						<!--<td><button type="button" class="btn btn-info btn-lg" data-toggle="modal" 
+								data-target="#myModal" style="background: transparent; border: none;">
+								<img src="<?php echo $base_path;?>img/coffee.png"></button><h3>COFFEE BREAK 
+								<br>SAUDÁVEL</h3>
+							</td>
+						<td><button type="button" class="btn btn-info btn-lg" data-toggle="modal" 
+							data-target="#myModal3" style="background: transparent; border: none;">
+							<img src="<?php echo $base_path;?>img/nutrieduca.png"></button><h3>NUTRIEDUCA</h3></a>
+						</td>
+						<td><button type="button" class="btn btn-info btn-lg" data-toggle="modal" 
+							data-target="#myModal2" style="background: transparent; border: none;">
+							<img src="<?php echo $base_path;?>img/rotulagem.png"></button><h3>ROTULAGEM</h3></a>
+						</td>
+						<td><button type="button" class="btn btn-info btn-lg" data-toggle="modal" 
+							data-target="#myModal4" style="background: transparent; border: none;">
+							<img src="<?php echo $base_path;?>img/qnutri.png"></button><h3>Q NUTRI</h3></a>
+						</td>
 					--></tr>
 				</table></center>
 				<div class="article-left" >
 
 
 				  <!-- Modal -->
-				  <div class="modal fade" id="myModal" role="dialog">
+				  <div class="modal fade" id="myModal4" role="dialog">
 				    <div class="modal-dialog">
 
 				      <!-- Modal content-->
@@ -296,7 +309,7 @@
 
 
 				  <!-- Modal -->
-				  <div class="modal fade" id="myModal2" role="dialog">
+				  <div class="modal fade" id="myModal1" role="dialog">
 				    <div class="modal-dialog">
 
 				      <!-- Modal content-->
@@ -359,7 +372,7 @@ respectivos a cada nutriente) e informação aos alérgicos.</p>
 
 
 				  <!-- Modal -->
-				  <div class="modal fade" id="myModal4" role="dialog">
+				  <div class="modal fade" id="myModal2" role="dialog">
 				    <div class="modal-dialog">
 
 				      <!-- Modal content-->
