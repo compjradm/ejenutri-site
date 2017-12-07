@@ -40,7 +40,7 @@
 	<body id="logo">
 		<nav style="min-width: 890px;" id="inicio" class="navegacao">
 			<ul>
-				<li><a href="#inicio" class="scroll">INICIO</a></li>
+				<li><a href="#logo" class="scroll">INICIO</a></li>
 				<li><a href="#sobre" class="scroll">SOBRE</a></li>
 				<li><a href="#projetos" class="scroll">PROJETOS</a></li>
 				<li><a href="#parceiros" class="scroll">PARCEIROS</a></li>
@@ -112,7 +112,7 @@
 				</div>
 			</div>
 			<article style="background-color:#817f82;     padding-bottom: 2.5%;">
-				<div class="article-center">
+				<div class="article-center" id="sobre">
 					<h2>Nossa História</h2>
 					<p class="cor-corpo"><?php echo do_shortcode('[retorno_txt id=7]');?></p>
 				</div>
@@ -405,11 +405,25 @@ respectivos a cada nutriente) e informação aos alérgicos.</p>
 				<div class="article-logo">
 					<center><table style="width:60%;">
 					  <tr>
-					  	<td><a href="https://www.facebook.com/cenagrijr/" target="_blank" style="color: #305286 !important"><img src="<?php echo $base_path;?>img/CENAGRI JR.jpg"><h3>CENAGRI JR</h3></a></td>
-					    <td><a href="https://www.facebook.com/ibbjunior/" target="_blank" style="color: #305286"><img src="<?php echo $base_path;?>img/IBBJR.png"><h3>IBB JR</h3></a></td>
-					    <td><a href="https://www.facebook.com/EJconflor/" target="_blank" style="color: #305286"><img src="<?php echo $base_path;?>img/conflor.png"><h3>CONFLOR JR</h3></a></td>
-					    <td><a href="https://www.facebook.com/bioproxjr/" target="_blank" style="color: #305286"><img src="<?php echo $base_path;?>img/BIOPROX JUNIOR.png"><h3>BIOPROX JUNIOR</h3></a></td>
-					  </tr>
+						<?php echo do_shortcode('[retorno_cat cat="parceiros"]'); ?>
+						
+						
+						<!-- PRECISA LINKAR OS FACEBOOKS CERTOS!! -->
+						
+						
+					  	<!--<td><a href="https://www.facebook.com/cenagrijr/" target="_blank" 
+							style="color: #305286 !important"><img src="<?php echo $base_path;?>img/CENAGRI JR.jpg">
+							<h3>CENAGRI JR</h3></a></td>
+					    <td><a href="https://www.facebook.com/ibbjunior/" target="_blank" 
+							style="color: #305286"><img src="<?php echo $base_path;?>img/IBBJR.png">
+							<h3>IBB JR</h3></a></td>
+					    <td><a href="https://www.facebook.com/EJconflor/" target="_blank" 
+							style="color: #305286"><img src="<?php echo $base_path;?>img/conflor.png">
+							<h3>CONFLOR JR</h3></a></td>
+					    <td><a href="https://www.facebook.com/bioproxjr/" target="_blank" 
+							style="color: #305286"><img src="<?php echo $base_path;?>img/BIOPROX JUNIOR.png">
+							<h3>BIOPROX JUNIOR</h3></a></td>
+					  --></tr>
 					</table></center>
 				</div>
 
@@ -418,7 +432,7 @@ respectivos a cada nutriente) e informação aos alérgicos.</p>
 
 			</article>
 			<article style="background-color:#817f82;     padding-bottom: 2.5%;">
-				<div class="article-center">
+				<div class="article-center" id="blog">
 					<h2>Blog</h2>
 				</div>
 			</article>

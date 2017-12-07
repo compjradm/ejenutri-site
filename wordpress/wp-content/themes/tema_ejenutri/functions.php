@@ -437,6 +437,7 @@ function return_bycat($atts){
 	$categoria = array(
     'post_type' => 'post',
 	'orderby' => 'title',
+	'order' => 'ASC',
     'tax_query' => array(
     array(
         'taxonomy' => 'category',
@@ -452,15 +453,29 @@ function return_bycat($atts){
 		if ( has_post_thumbnail()){
 			$link = get_the_post_thumbnail();
 			echo $link;
-			$return .= '<td><button type="button" class="btn btn-info btn-lg" data-toggle="modal" 
+			switch($var['cat']){
+				case 'projetos': $return .= '<td><button type="button" class="btn btn-info btn-lg" data-toggle="modal" 
 								data-target="#myModal'.$cont.'" style="background: transparent; border: none;">'
 								.$aux->post_title.'</td>';
+								break;
+				case 'parceiros': $return .= '<td><a href="https://www.facebook.com/cenagrijr/" target="_blank" 
+								style="color: #305286 !important"><img src="<?php echo $base_path;?>img/CENAGRI JR.jpg">
+								<h3>'.$aux->post_title.'</h3></a></td>';
+								break;
+			}
 		}
 		else{
 			//echo 'aqui';
-			$return .= '<td><button type="button" class="btn btn-info btn-lg" data-toggle="modal" 
+			switch($var['cat']){
+				case 'projetos': $return .= '<td><button type="button" class="btn btn-info btn-lg" data-toggle="modal" 
 								data-target="#myModal'.$cont.'" style="background: transparent; border: none;">'
 								.$aux->post_title.'</td>';
+								break;
+				case 'parceiros': $return .= '<td><a href="https://www.facebook.com/cenagrijr/" target="_blank" 
+								style="color: #305286 !important"><img src="<?php echo $base_path;?>img/CENAGRI JR.jpg">
+								<h3>'.$aux->post_title.'</h3></a></td>';
+								break;
+			}
 		}
 	}
 	return $return;
